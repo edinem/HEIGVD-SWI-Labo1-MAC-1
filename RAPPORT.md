@@ -32,9 +32,15 @@ Le code 3 se produit lorsque la STA et l'AP ont déjà effectué l'authentificat
 
 **Question** : Expliquer l'effet de cette attaque sur la cible
 
+L'attaque permet de déauthentifier une cible d'un access point spécifique.
+
 
 
 ##### 1.2 Fonctionnement du script
+
+Afin d'exécuter le script, il suffit de spécifier l'interface utilisée, l'adresse MAC du client, l'adresse MAC de l'AP ainsi que le code (1, 4, 5 ou 8). Le script va envoyé 10 paquets afin désauthentifier le client.
+
+![](./images/ex1.png)
 
 
 
