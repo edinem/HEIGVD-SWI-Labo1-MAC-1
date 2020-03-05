@@ -18,7 +18,11 @@ Oui, nous avons simulé un code nous même. Nous avons connecté un de nos lapto
 
 **Question** : quels codes/raisons justifient l'envoie de la trame à la STA cible et pourquoi ?
 
+Les codes 1 et 5 sont envoyés à la STA. En effet, le code 1 peut être envoyé dans les deux directions et le code 5 est envoyé par l'AP à la STA lorsque l'AP ne peut pas gérer toutes les connections.
+
 **Question** : quels codes/raisons justifient l'envoie de la trame à l'AP et pourquoi ?
+
+Les codes 1, 4 et 8 sont envoyées à l'AP. Le code 4 est envoyé lorsque l'AP ne répond plus (lorsqu'on s'éloigne avec un téléphone par exemple) et le code 8 est envoyé lorsque la STA quitte la BSS et informe l'AP.
 
 **Question** : Comment essayer de déauthentifier toutes les STA ?
 
