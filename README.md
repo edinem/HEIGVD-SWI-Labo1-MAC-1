@@ -8,7 +8,9 @@
 
 **Question** : Quel code est utilisé par aircrack pour déauthentifier un client 802.11. Quelle est son interpretation ?
 
-Le code utilisé par aircrack est le **code 7**. 
+Le code utilisé par aircrack est le **code 7**. Il représente `Class 3 frame received from nnassociated STA.`. En d'autres termes, ce code signifie que la STA essaie de transmettre des données avant son association avec l'AP; les données sont de `Class 3`
+
+Source : https://support.zyxel.eu/hc/en-us/articles/360009469759-What-is-the-meaning-of-802-11-Deauthentication-Reason-Codes-
 
 **Question** : A l'aide d'un filtre d'affichage, essayer de trouver d'autres trames de déauthentification dans votre capture. Avez-vous en trouvé d'autres ? Si oui, quel code contient-elle et quelle est son interpretation ?
 
