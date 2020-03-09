@@ -6,7 +6,7 @@
 
 #### 1.1 Questions
 
-**Question** : quel code est utilisé par aircrack pour déauthentifier un client 802.11. Quelle est son interpretation ?
+**Question** : Quel code est utilisé par aircrack pour déauthentifier un client 802.11. Quelle est son interpretation ?
 
 Le code utilisé par aircrack est le **code 7**. 
 
@@ -16,11 +16,11 @@ Oui, nous avons simulé un code nous même. Nous avons connecté un de nos lapto
 
 ![./images/deauth_code.jpg](./images/deauth_code.jpg)
 
-**Question** : quels codes/raisons justifient l'envoie de la trame à la STA cible et pourquoi ?
+**Question** : Quels codes/raisons justifient l'envoie de la trame à la STA cible et pourquoi ?
 
 Les codes 1 et 5 sont envoyés à la STA. En effet, le code 1 peut être envoyé dans les deux directions et le code 5 est envoyé par l'AP à la STA lorsque l'AP ne peut pas gérer toutes les connections.
 
-**Question** : quels codes/raisons justifient l'envoie de la trame à l'AP et pourquoi ?
+**Question** : Quels codes/raisons justifient l'envoie de la trame à l'AP et pourquoi ?
 
 Les codes 1, 4 et 8 sont envoyées à l'AP. Le code 4 est envoyé lorsque l'AP ne répond plus (lorsqu'on s'éloigne avec un téléphone par exemple) et le code 8 est envoyé lorsque la STA quitte la BSS et informe l'AP.
 
@@ -34,7 +34,7 @@ Le code 8 se produit lorsqu'une erreur survient entre l'association et  l'échan
 
 Le code 3 se produit lorsque la STA et l'AP ont déjà effectué l'authentification. Le nom de la raison par défaut est "Leaving_network_deauth".
 
-**Question** : Expliquer l'effet de cette attaque sur la cible
+**Question** : Expliquer l'effet de cette attaque sur la cible.
 
 L'attaque permet de déauthentifier une cible d'un access point spécifique.
 
@@ -54,7 +54,9 @@ Afin d'exécuter le script, il suffit de spécifier l'interface utilisée, l'adr
 
 ##### 2.1 Questions
 
-**Question** : Expliquer l'effet de cette attaque sur la cible
+**Question** : Expliquer l'effet de cette attaque sur la cible.
+
+L'attaquant usurpe l'AP en broadcastant intensivement son beacon avec un channel différent. L'attaquant envoyant des paquets à grande fréquence, les victimes auront plus de chance de se connecter à l'attaquant afin de voler des informations de connexion de ceux-ci.
 
 ##### 2.2 Fonctionnement du script
 
