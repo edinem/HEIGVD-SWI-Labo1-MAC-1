@@ -49,7 +49,7 @@ def scanSSIDs(packet):
     ssid = packet.getlayer(Dot11).info.decode("utf-8")
 
     # On verifie si le packet a le layer Dot11Elt
-    if(packet.haslayer(Dot11Elt)):
+    if(packet.haslayer(Dot11Elt) and (ssid not in ssids) and (ssid != '') and (ssid != '\x00\x00\x00\x00\x00\x00\x00\x00')):
         subpacket = packet[Dot11Elt]
         channel = -1
         # Modification du channel du packet
@@ -70,11 +70,11 @@ def scanSSIDs(packet):
 
         if channel != -1:
             for i in range(1, 14):
-                os.system('iwconfig %s channel %d' % (interface, i))
-                if (ssid not in ssids) and (ssid != '') and (ssid != '\x00\x00\x00\x00\x00\x00\x00\x00'):
+                if(ssid not in ssids):
+                    os.system('iwconfig %s channel %d' % (interface, i))
                     # On ajoute l'entrées dans les wifis
                     wifis.append([len(wifis), ssid, bssid, int(channel), packet.dBm_AntSignal, packet])
-                    ssids.append(ssid)
+                ssids.append(ssid)
     return None
 
 
